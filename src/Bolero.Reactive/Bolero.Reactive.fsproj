@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Utils.fs" />
+        <Compile Include="HookIdentity.fs" />
+        <Compile Include="ReactiveValue.fs" />
+        <Compile Include="EffectHook.fs" />
+        <Compile Include="StateHook.fs" />
+        <Compile Include="ReactiveComponentContext.fs" />
+        <Compile Include="ReactiveComponentContextExtensions.fs" />
+        <Compile Include="ReactiveComponent.fs" />
+        <Compile Include="HtmlReactiveExtensions.fs" />
+        <Content Include="paket.references" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Bolero.Html\Bolero.Html.fsproj" />
+      <ProjectReference Include="..\Bolero\Bolero.fsproj" />
+    </ItemGroup>
+
+    <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>
